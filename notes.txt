@@ -1,0 +1,98 @@
+apachectl start 
+apachectl stop
+
+vi /etc/apache2/httpd.conf
+
+DocumentRoot "/Library/WebServer/Documents"
+<Directory "/Library/WebServer/Documents">
+
+===>>
+
+/Users/davidterwilliger/Desktop/Projects/fwwebb
+
+DocumentRoot "/Users/davidterwilliger/Desktop/Projects/fwwebb"
+<Directory "/Users/davidterwilliger/Desktop/Projects/fwwebb">
+
+
+Not running php
+
+https://superuser.com/questions/1129654/apache-showing-php-code-after-upgrade-on-mac-to-macos-sierra
+
+
+
+
+Need to load php Module in apache:
+
+/usr/local/opt/php@8.3/lib/httpd/modules/libphp.so
+LoadModule php_module /usr/local/opt/php@8.3/lib/httpd/modules/libphp.so
+
+https://stackoverflow.com/questions/71798898/enable-php-on-mac-monterey
+
+vi /var/log/apache2/error_log 
+httpd -S
+
+https://stackoverflow.com/questions/29076321/how-do-you-fix-code-object-is-not-signed-at-all-in-subcomponent-in-xcode-6-m
+
+
+apachectl -t -D DUMP_VHOSTS
+
+https://medium.com/@nadine.fisch/add-php-to-apache-on-macos-12-e3bb43469195
+
+
+David Terwilliger’s CA
+codesign --sign "David Terwilliger’s CA" --force --keychain ~/Library/Keychains/login.keychain-db /usr/local/opt/php@8.3/lib/httpd/modules/libphp.so
+
+"David Terwilliger’s CA"
+
+LoadModule php_module /usr/local/opt/php@8.3/lib/httpd/modules/libphp.so "David Terwilliger’s CA"
+
+
+[Mon May 13 10:36:39.878856 2024] [so:notice] [pid 18312] AH06662: Allowing module loading process to continue for module at /usr/local/opt/php@8.3/lib/httpd/modules/libphp.so because module signature matches authority "David Terwilliger\xe2\x80\x99s CA" specified in LoadModule directive
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using Davids-MacBook-Air.local. Set the 'ServerName' directive globally to suppress this message
+httpd not running, trying to start
+davidterwilliger@Davids-MacBook-Air fwwebb % 
+
+
+php is now Loaded 
+
+Now for mysql
+
+
+mysql database davidtest
+
+mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+       species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+
+       INSERT INTO pet
+       VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL); 
+
+INSERT INTO pet
+       VALUES ('Bruno','Diane','Dog','f','1999-03-30',NULL); 
+
+       INSERT INTO pet
+       VALUES ('noris','Diane','cat','f','1999-03-30',NULL); 
+
+
+Module re-write
+
+
+https://www.freecodecamp.org/news/how-to-build-a-routing-system-in-php/
+
+Routing, changing hta access to remove index, fallback route and things like that.
+
+Next => bootstrap and templating
+
+Install Composer
+
+composer require "twig/twig:^3.0"
+
+https://twig.symfony.com/doc/3.x/tags/extends.html
+
+
+Jesus this is fun to reverse engineer their site.
+
+Hawkeye what ever the fuck this is.
+
+Nested css
+
+        <!--//SEARCH-->

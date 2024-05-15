@@ -1,0 +1,440 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -------------------------
+    Searchbar & Autocomplete
+   ------------------------- */
+hawksearch-search-field {
+    position: relative !important;
+}
+
+hawksearch-autocomplete .autocomplete {
+    position: absolute;
+    display: block;
+    background: #fff;
+    border: 1px solid #AAAAAA !important;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 4px 1px rgb(50 50 50 / 25%);
+    z-index: 999999;
+    text-align: left;
+    width: 100%;
+}
+
+hawksearch-autocomplete .autocomplete__title {
+    padding: 5px;
+    color: #646669;
+    font-weight: bold;
+    background: #d9d9d9;
+}
+
+hawksearch-autocomplete .autocomplete__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*hawksearch-autocomplete li.autocomplete__product:nth-child(even) {*/
+hawksearch-autocomplete .autocomplete__list>li:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+hawksearch-autocomplete ul.row.autocomplete__list {
+    padding: 3px;
+}
+
+hawksearch-autocomplete .autocomplete__product {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 6px 10px;
+    color: #8b2300;
+    text-decoration: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    zoom: 1;
+}
+
+hawksearch-autocomplete .autocomplete__product:before,
+hawksearch-autocomplete .autocomplete__product:after {
+    content: "";
+    display: table;
+}
+
+hawksearch-autocomplete .autocomplete__product:after {
+    clear: both;
+}
+
+hawksearch-autocomplete .autocomplete__product__image {
+    display: inline;
+    float: left;
+    width: 70px;
+    height: auto;
+    margin: 0;
+    text-align: center;
+}
+
+hawksearch-autocomplete .autocomplete__product__image img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+hawksearch-autocomplete .autocomplete__product__content {
+    display: block;
+    margin-left: 80px;
+}
+
+hawksearch-autocomplete .autocomplete__product__content .autocomplete__product__title {
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1em;
+    border: 0;
+}
+
+hawksearch-autocomplete div.autocomplete__title.autocomplete__view-all {
+    padding: 10px;
+}
+
+/* -------------------------
+    Results & Facets
+   ------------------------- */
+.hawksearch-placeholder {
+    display: inline-block;
+    background-color: #444;
+    height: 12px;
+    border-radius: 100px;
+    margin: 5px 0;
+    min-width: 100px;
+    opacity: .1;
+    animation: fading 1.5s infinite;
+}
+
+.hawksearch-placeholder:first-child {
+    margin-top: 0;
+}
+
+.hawksearch-placeholder:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes fading {
+    0% {
+        opacity: .1;
+    }
+
+    50% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: .1;
+    }
+}
+
+hawksearch-pagination {
+    height: 20px;
+}
+
+hawksearch-pagination .pagination__pages {
+    list-style: none;
+}
+
+
+
+/*hawksearch-facets-list*/
+.facets__heading {
+    margin: 0;
+    padding: 8px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #fff;
+    background: #333333;
+}
+
+.facets__content {
+    background-color: #F1F1F1;
+    border: none;
+    border-top-style: none;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.facets__content {
+    display: none
+}
+
+.facets--expanded .facets__content {
+    display: block
+}
+
+@media(min-width: 990px) {
+    .facets__heading {
+        cursor: default
+    }
+
+    .facets__heading__mobile-toggle {
+        display: none
+    }
+
+    .facets__heading:hover {
+        color: #ffffff
+    }
+
+    .facets__content {
+        display: block
+    }
+}
+
+@media(max-width: 990px) {
+    .facets__heading:hover {
+        color: #ffffff
+    }
+}
+
+hawksearch-selected-facets {
+    display: block;
+    background-color: #dbdbdb;
+    border-bottom: 1px solid #bdbebe;
+}
+
+hawksearch-selected-facets .hawk-selectedGroup {
+    padding: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #bdbebe;
+}
+
+hawksearch-selected-facets .hawk-selectedGroup:first-child {
+    border-top: 0;
+}
+
+hawksearch-selected-facets .hawk-selectedGroup:last-child {
+    border-bottom: 0;
+}
+
+hawksearch-selected-facets .hawk-selectedGroup ul {
+    max-height: none;
+    margin: 0;
+    overflow: visible;
+    background: #f1f1f1;
+    border: 1px solid #bdbebe;
+}
+
+hawksearch-selected-facets a.selected-facets__item__remove {
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+hawksearch-selected-facets i.fa-times {
+    color: #C31009;
+    font-size: 17px;
+}
+
+hawksearch-facet-wrapper .facet, hawksearch-selected-facets .facet {
+    padding: 10px 0px;
+    border-top: 2px solid #fff;
+    border-bottom: none;
+}
+
+hawksearch-facet-wrapper .facet__heading, hawksearch-selected-facets .facet__heading {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 8px;
+}
+
+hawksearch-facet-wrapper .facet__heading:after, hawksearch-selected-facets .facet__heading:after {
+    position: absolute;
+    display: none;
+    top: 2px;
+    right: 10px;
+    font-family: 'hawksearch';
+    font-size: 14px;
+    color: #b8b8b8;
+    content: "\2b";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+hawksearch-facet-wrapper .facet__heading--collapsible {
+    cursor: pointer;
+}
+
+hawksearch-facet-wrapper .facet__content, hawksearch-selected-facets .facet__content {
+    padding: 5px 5px;
+}
+
+hawksearch-facet-wrapper .checkbox-list-facet {
+    overflow-y: auto
+}
+
+.search-within-facet {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+hawksearch-facet-wrapper .facet__search, .search-within-facet__input {
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 0.933em;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+hawksearch-facet-wrapper input[type="text"] {
+    border: 1px solid #d0d0d0
+}
+
+hawksearch-facet-wrapper ul, hawksearch-selected-facets ul {
+    margin: 0;
+    padding: 0 8px 8px 8px;
+    list-style-type: none;
+    background: #fff;
+    border: none;
+    width: auto;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+hawksearch-facet-wrapper li, hawksearch-selected-facets li {
+    position: relative;
+    margin-top: 5px;
+}
+
+hawksearch-facet-wrapper li:before, hawksearch-facet-wrapper li:after, hawksearch-selected-facets li:before, hawksearch-selected-facets li:after {
+    content: "";
+    display: table;
+}
+
+hawksearch-facet-wrapper li:after, hawksearch-selected-facets li:after {
+    clear: both;
+}
+
+hawksearch-facet-wrapper li>span {
+    cursor: pointer;
+}
+
+hawksearch-facet-wrapper li>span:hover, hawksearch-facet-wrapper li>div:hover, hawksearch-selected-facets li>a:hover {
+    color: #106fa0;
+}
+
+hawksearch-facet-wrapper li[class$="facet__list__item"], hawksearch-selected-facets li .selected-facets__item__remove {
+    font-size: 87.5%;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333333;
+}
+
+.checkbox-list-facet__list__item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    color: #295C94;
+    font-size: 14px;
+    line-height: 6px;
+    border: 1px solid #b8b8b8;
+    background-color: #f3f3f3;
+}
+
+.checkbox-list-facet__list__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-list-facet__list__item input[type=checkbox] {
+    display: none
+}
+
+.checkbox-list-facet__list__item input[type=checkbox]+label {
+    position: relative;
+    display: block;
+    margin: 0 0 5px 0;
+    padding-left: 28px;
+    cursor: pointer
+}
+
+.checkbox-list-facet__list__item input[type=checkbox]+label:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    font-size: 18px;
+    line-height: 8px;
+    border: solid 1px #ccc;
+    background: #fff
+}
+
+.checkbox-list-facet__list__item input[type=checkbox]:hover+label:before {
+    content: "\2714";
+    border-color: #8d8b8b;
+    background-color: #c0c0c0;
+}
+
+.checkbox-list-facet__list__item input[type=checkbox]:checked+label:before {
+    content: "\2714";
+    border-color: #8d8b8b;
+}
+
+hawksearch-facet-wrapper .facet__search {
+    margin-bottom: 5px;
+}
+
+.facet__value {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+hawksearch-facet-wrapper .facet__value__count {
+    color: #8a8a8a;
+    font-size: 87.5%;
+}
+
+hawksearch-search-within-facet .hawk-searchWithinButton {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    padding: 5px 7px 0;
+    font-size: 87.5%;
+    color: #FFFFFF;
+    background-color: #106FA0;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.25;
+}
+
+.checkbox-list-facet__list__item {
+    font-size: 14px;
+}
+
+ul.checkbox-list-facet__list {
+    white-space: nowrap;
+}
+
+hawksearch-icon {
+    white-space: nowrap;
+}
+
+hawksearch-modified-query .modified-query {
+    color: #C31009;
+}
+
+hawksearch-modified-query .modified-query__modified {
+    font-style: italic;
+}
+
+hawksearch-modified-query .modified-query__original {
+    font-weight: bold;
+}

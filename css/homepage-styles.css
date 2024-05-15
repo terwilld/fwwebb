@@ -1,0 +1,59 @@
+img.bw-logo {
+    filter: grayscale(100%);
+    padding: 12px 5px 15px 5px;
+    opacity: 0.75
+}
+
+img.bw-logo:hover {
+    filter: grayscale(0);
+    opacity: 1
+}
+
+.banner {
+    position: relative
+}
+
+.banner img {
+    width: 100%
+}
+
+.banner .container {
+    position: absolute;
+    left: 1.5%;
+    right: 0;
+    top: 65px;
+    text-align: left;
+    transform: translateY(-50%)
+}
+
+.banner_right .home_slider_content {
+    position: absolute;
+    left: 0px;
+    right: 0;
+    bottom: 0px;
+    text-align: center;
+    padding: 4px 0;
+}
+
+.super-cat-box-front img {
+    width: 85%
+}
+
+.super-cat-box-front p {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px
+}
+
+.super-cat-box-front:hover {
+    text-decoration: none !important;
+    color: black
+}
+
+.grey-bkg {
+    background-color: #efefef;
+}
+
+.grey-border {
+    border: solid 10px #efefef;
+}
