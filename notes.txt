@@ -142,4 +142,9 @@ Need to fix .htaacesss file.  Conf file was not running it.
 Success.  My typo in the .hta crashed the server.
 
 
-Turn off selinux
+Turn off selinux  Clone is working
+
+Modify to actually be a template and fine what parts are custom per page
+
+
+https://twig.symfony.com/doc/3.x/tags/extends.html

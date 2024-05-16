@@ -18,7 +18,8 @@ switch ($request) {
     case '/':
         // echo $twig ->render('base.html.twig');
        // echo $twig ->render('child.html');
-        echo $twig ->render('home.html');
+        //echo $twig ->render('home.html');
+        echo $twig -> render('fwwebbhome.html');
         //require __DIR__ . $viewDir . 'home.php';
         break;
 
@@ -26,8 +27,16 @@ switch ($request) {
         echo $twig -> render('child.html');
         break;
 
+    case '/test2':
+        echo $twig -> render('testview.php');
+        require __DIR__ . $viewDir . 'testview.php';
+        break;
 
-        
+    case '/test3':
+        echo $twig -> render('fwwebbhome.html');
+        // require __DIR__ . $viewDir . 'testview.php';
+        break;
+
     case '/views/users':
         require __DIR__ . $viewDir . 'users.php';
         break;
@@ -39,7 +48,6 @@ switch ($request) {
     case '/twig':
         require __DIR__ . $viewDir . 'twig.php';
         break;
-
 
     default:
         http_response_code(404);
