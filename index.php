@@ -17,8 +17,8 @@ switch ($request) {
     case '':
     case '/':
         // echo $twig ->render('base.html.twig');
-                echo $twig ->render('child.html');
-        
+       // echo $twig ->render('child.html');
+        echo $twig ->render('home.html');
         //require __DIR__ . $viewDir . 'home.php';
         break;
 
@@ -26,9 +26,7 @@ switch ($request) {
         echo $twig -> render('child.html');
         break;
 
-    case '/newhome':
-        echo $twig -> render('home2.html');
-        break;
+
         
     case '/views/users':
         require __DIR__ . $viewDir . 'users.php';

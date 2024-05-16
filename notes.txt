@@ -96,3 +96,50 @@ Hawkeye what ever the fuck this is.
 Nested css
 
         <!--//SEARCH-->
+
+
+ec2 initial setup
+sudo yum install httpd
+http://52.87.255.198/
+ vi /etc/httpd/conf/httpd.conf 
+DocumentRoot "/var/www/html"
+sudo yum install php git
+
+
+sudo rpm -i --nogpgcheck compat-openssl10-1.0.2o-4.el8.x86_64.rpm 
+Need to get php updated
+
+wget https://rpmfind.net/linux/mageia/distrib/9/x86_64/media/core/updates/lib64ncurses5-6.3-20221203.2.1.mga9.x86_64.rpm
+
+  165  sudo yum install libgcrypt11-1.4.0-14.99.el4.x86_64.rpm 
+  166  history | grep update
+  167  sudo yum update php
+sudo yum install composer
+
+Add php module
+https://stackoverflow.com/questions/20752408/how-to-add-a-php-module-to-apache-in-redhat-centos
+
+on my mac: 
+LoadModule php_module /usr/local/opt/php@8.3/lib/httpd/modules/libphp.so "David Terwilliger’s CA"
+
+/etc/httpd/modules/libphp.so
+
+LoadModule php_module /etc/httpd/modules/libphp.so
+
+https://donjajo.com/fix-apache-running-threaded-mpm-php-module-not-compiled-threadsafe-fedora/
+
+Wow.  Modules problems.  Pretty interesting.
+
+Running now.
+
+Need to fix .htaacesss file.  Conf file was not running it.
+
+<Directory "/var/www">
+    AllowOverride all
+    # Allow open access:
+    Require all granted
+</Directory>
+Success.  My typo in the .hta crashed the server.
+
+
+Turn off selinux
