@@ -23,34 +23,9 @@ switch ($request) {
         //require __DIR__ . $viewDir . 'home.php';
         break;
 
-    case '/test':
-        echo $twig -> render('child.html');
-        break;
-
-    case '/test2':
-        echo $twig -> render('testview.php');
-        require __DIR__ . $viewDir . 'testview.php';
-        break;
-
-    case '/test3':
-        echo $twig -> render('fwwebbhome.html');
-        // require __DIR__ . $viewDir . 'testview.php';
-        break;
-
-    case '/views/users':
-        require __DIR__ . $viewDir . 'users.php';
-        break;
-
-    case '/contact':
-        require __DIR__ . $viewDir . 'contact.php';
-        break;
-
-    case '/twig':
-        require __DIR__ . $viewDir . 'twig.php';
-        break;
 
     default:
         http_response_code(404);
-        require __DIR__ . $viewDir . '404.php';
+        echo $twig -> render('404.html');
 }
 ?>
