@@ -8,9 +8,33 @@ error_log("Inside Index.php", 0);
 error_log("This might actually be working",0);
 
 require_once './vendor/autoload.php';
-error_log("Derp");
-$loader = new \Twig\Loader\FilesystemLoader('templates');
+error_log("Test in the index page");
+$loader = new \Twig\Loader\FilesystemLoader(array('templates','views'));
 $twig = new \Twig\Environment($loader);
+
+// $david = 'THIS IS DAVID VARIABLE';
+// error_log($david);
+
+// $davidArray = array("Volvo", "BMW", "Toyota");
+// error_log(print_r($davidArray,true));
+
+$davidArray = array(
+    "foo" => "bar",
+    "firstname" => "David",
+    "lastname" => "Terwilliger",
+);
+error_log("This is my access specific variable");
+error_log($davidArray["foo"]);
+
+$davidArray2 = array(
+    "title" => "My Fancy Title",
+    "location" => "NEwton Str boston ma",
+);
+
+error_log("This is my second array");
+error_log("");
+error_log("");
+error_log($davidArray2["title"]);
 
 
 switch ($request) {
@@ -19,13 +43,38 @@ switch ($request) {
         // echo $twig ->render('base.html.twig');
        // echo $twig ->render('child.html');
         //echo $twig ->render('home.html');
+        error_log("I'm insdie the root page");
         echo $twig -> render('fwwebbhome.html');
         //require __DIR__ . $viewDir . 'home.php';
         break;
+    
+    case '/events/':
+        error_log("I'm inside the events page");
+        echo $twig -> render('events.html');
+        break;
+    
+    case '/events2':
+        error_log("I'm inside the twig events page");
+        echo $twig -> render('events2.html');
+        break;
+
+    case '/testtwig':
+        error_log("I'm inside the twig test");
+        include 'fakedata.php';
+        error_log($testImport);
+        
+        // echo $twig->render('testtwig.html.twig', 
+        // ['title' => 'GE Ductless Cold Climate Training', 
+        // 'trainingLogo' => 'true',
+        // 'Date_1'=> 'Wednesday, May 15 2024',
+        // 'Date_2' => '08:00 AM to 01:00 PM']);
+        echo $twig->render('testtwig.html.twig', ['data' => $fakeData]);
 
 
+        break;
     default:
         http_response_code(404);
         echo $twig -> render('404.html');
+        break;
 }
 ?>

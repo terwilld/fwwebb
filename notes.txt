@@ -148,3 +148,64 @@ Modify to actually be a template and fine what parts are custom per page
 
 
 https://twig.symfony.com/doc/3.x/tags/extends.html
+
+https://www.fwwebb.com/wobf/
+
+Testing to look for arrays
+Passing data through to arrays using twig in events
+
+
+Talk about the javascript API
+_context has an extra key
+https://www.drupal.org/node/1903374
+
+
+
+https://stackoverflow.com/questions/26132574/step-by-step-guide-to-enabling-twig-debug-dump-in-symfony
+LOL "Twigs website is particularlyunhelpful"
+Twig uses a syntax similar to the Django and Jinja template languages which
+inspired the Twig runtime environment.
+_context has an extra datapoint I'm trying to ignore and I can't dump it
+work around in logic to ignore the phantom item
+better is to change 
+['data' => $fakeData]
+        echo $twig->render('testtwig.html.twig', $fakeData);
+        echo $twig->render('testtwig.html.twig', ['data' => $fakeData]);
+
+        with associated change in the template
+Change data structure for the input data
+        'Topics'   => ['Title'=> 'Topics covered will include:','contents'=> ['Introduction to GE Ductless','Technology and Product Lineup','Installation and Startup','System Operation and Control','Troubleshooting','Application']],
+        //'Topics'   => ['Introduction to GE Ductless','Technology and Product Lineup','Installation and Startup','System Operation and Control','Troubleshooting','Application'],
+
+Stupid formatting changes within Topics to be covered
+https://twig.symfony.com/doc/3.x/api.html#escaper-extension
+https://stackoverflow.com/questions/8355123/how-to-display-string-that-contains-html-in-twig-template
+
+fun.  Shove html formatting in string rather than completely change data structure
+   | raw
+
+
+
+Change post address comment to be arrays
+Post address topic = string
+Actually its an arrays
+
+Last comment
+Actually last comment might have a link
+Goddamn.  Actually has a new possible note.  need to re-transform data model.
+This is probably done by hand.
+
+
+
+
+ToDO:
+twig debug.
+Why is my nav translator thing differently formatted.  I have two.  EC2 doesn'tags
+Thow stuff in database
+Shopify
+php learn lamp
+Get the drop down filter to work?
+
+
+
+

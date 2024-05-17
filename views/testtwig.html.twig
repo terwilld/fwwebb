@@ -1,0 +1,146 @@
+{% extends "fwwebbbase.html" %}
+
+
+{% block content %}
+
+
+<script>
+    Func = new Functions(); //### Create a new class object for Functions ###
+    function LocationState(state) {
+        location.assign('index.php?State=' + state.value);
+    }
+</script>
+<a name="top" data-uw-rm-kbnav="anohref" tabindex="0" aria-label="Open this option" data-uw-rm-empty-ctrl=""></a>
+
+<!--PAGE-->
+
+
+<div class="container-fluid">
+    <div class="container-xl container-lg container-fluid-sm py-2 px-2">
+        <a href="https://form.jotform.com/230924122161141?utm_source=website&amp;utm_campaign=events" target="_blank"
+            class="hidden" aria-label="Vendor Expo 2023 - open in a new tab" data-uw-rm-ext-link=""
+            uw-rm-external-link-id="https://form.jotform.com/230924122161141?utm_source=website&amp;utm_campaign=events$vendorexpo2023"
+            data-uw-rm-brl="PR"
+            data-uw-original-href="https://form.jotform.com/230924122161141?utm_source=website&amp;utm_campaign=events">
+            <img src="/images/fwwebb/events/2023/VendorExpoDesktop_banner.png" alt="Vendor Expo 2023"
+                class="img-fluid mx-auto d-none d-md-block" data-uw-rm-alt-original="Vendor Expo 2023"
+                data-uw-rm-alt="ALT"> <img src="/images/fwwebb/events/2023/VendorExpoMobile_banner.png"
+                alt="Vendor Expo 2023" class="img-fluid mx-auto d-block d-md-none"
+                data-uw-rm-alt-original="Vendor Expo 2023" data-uw-rm-alt="ALT"> </a>
+        <div class="row">
+            <div class="col-12 px-4 px-auto">
+                <h1 class="category-page-header mb-3" data-uw-rm-color-contrast="prs" role="heading" aria-level="2"
+                    data-uw-rm-heading="level">F.W. Webb's Upcoming Industry Events</h1>
+                <h2 class="bold mb-2" data-uw-rm-color-contrast="prs">Join Our Professional Networking Events</h2>
+                <h3 class="bold mb-3" data-uw-rm-color-contrast="prs">Calendar of Educational and Trade Events</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <article>
+                    <div class="col-12 py-2 px-2 mb-3" style="background-color:#ccc; ">
+                        <select class="form-select form-control" id="form-control" onchange="LocationState(this);"
+                            data-uw-rm-color-contrast="prs" data-uw-rm-form="fx" aria-label="Single select">
+                            <option data-uw-rm-color-contrast="prs">All Locations</option>
+                            <option data-uw-rm-color-contrast="prs">Connecticut</option>
+                            <option data-uw-rm-color-contrast="prs">Maine</option>
+                            <option data-uw-rm-color-contrast="prs">Massachusetts</option>
+                            <option data-uw-rm-color-contrast="prs">New Hampshire</option>
+                            <option data-uw-rm-color-contrast="prs">New Jersey</option>
+                            <option data-uw-rm-color-contrast="prs">New York</option>
+                            <option data-uw-rm-color-contrast="prs">Pennsylvania</option>
+                            <option data-uw-rm-color-contrast="prs">Rhode Island</option>
+                            <option data-uw-rm-color-contrast="prs">Vermont</option>
+                        </select>
+                    </div>
+
+
+                    <div class="row mx-1">
+                        <div class="col-12">
+
+                        {% for event in data %}
+                            {% if event.title %}
+                            <div class="col-sm-12">
+                                {% if event.trainingLogo == 'true' %}
+                                <p class="h1-settings" data-uw-rm-color-contrast="prs"><img src="/images/fwwebb/events/training-icon.gif" align="right" data-uw-rm-alt-original="" role="presentation" alt="" data-uw-rm-alt="SM">{{event.title}}</p>
+                                {% else %}
+                                <p class="h1-settings" data-uw-rm-color-contrast="prs">{{event.title}}</p>
+                                {% endif %}
+                                <time>
+                                <p class="dk-gray" data-uw-rm-color-contrast="prs"><strong data-uw-rm-color-contrast="prs">{{event.Date_1}}</strong>
+                                <br role="presentation" data-uw-rm-sr="">{{event.Date_2}}<br role="presentation" data-uw-rm-sr=""></p>
+                                <address data-uw-rm-color-contrast="prs"><strong data-uw-rm-color-contrast="prs">{{event.Company}}</strong>
+                                <br role="presentation" data-uw-rm-sr="">{{event.Address_1}}
+                                <br role="presentation" data-uw-rm-sr="">{{event.Address_2}}
+                                </address>
+
+                                
+                                {% if event.Post_Address_Comment %}
+                                   {% for comment in event.Post_Address_Comment %}
+                                    {{comment | raw }}
+                                    <p data-uw-rm-color-contrast="prs">
+                                    <p data-uw-rm-color-contrast="prs">
+                                   {% endfor %}
+
+                                {% endif %}
+                                {% if event.Topics %}
+                                
+                                <b data-uw-rm-color-contrast="prs">{{ event.Topics.Title }}</b>
+                                    {% for Topic in event.Topics.contents  %}
+                                        <br role="presentation" data-uw-rm-sr="">{{Topic | raw}}
+                                    {% endfor %}  
+                                <br role="presentation" data-uw-rm-sr="">
+                                {% endif %}
+                                {% if event.Italics_msg %}  
+                                <br role="presentation" data-uw-rm-sr=""><i data-uw-rm-color-contrast="prs">{{event.Italics_msg}}</i>
+                                <br role="presentation" data-uw-rm-sr="">
+                                {% endif %}
+
+                                {% if event.Bold_last_msg %}
+                                
+                                <br role="presentation" data-uw-rm-sr=""><b data-uw-rm-color-contrast="prs">Space is limited...register today!</b>
+
+                                {% endif %}
+                                
+                                {% if event.Last_msg %}
+                                  {% if event.Last_msg.link %}
+                                    <br role="presentation" data-uw-rm-sr="">
+                                    <a href="{{event.Last_msg.link}}" target="_blanc" data-uw-rm-color-contrast="prs" data-uw-rm-brl="PR" data-uw-original-href="{{event.Last_msg.link}}">{{event.Last_msg.content}}</a><br role="presentation" data-uw-rm-sr="">
+                                  {% else %}
+                                    <br role="presentation" data-uw-rm-sr="">{{event.Last_msg.content}}
+                                    {% endif %}
+                                {% endif %}
+                                    </p> <p></p>
+                                    <hr role="presentation" data-uw-rm-sr="">
+                                </time>
+                            </div>
+                        {% endif %}
+                        {% endfor %}
+
+
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="/images/fwwebb/events/Events-Training_1.jpg" alt="Events and Training"
+                    class="img-fluid d-none d-md-block mb-3" data-uw-rm-alt-original="Events and Training"
+                    data-uw-rm-alt="ALT">
+                <img src="/images/fwwebb/events/Events-Training_2.jpg" alt="Events and Training"
+                    class="img-fluid d-none d-md-block mb-3" data-uw-rm-alt-original="Events and Training"
+                    data-uw-rm-alt="ALT">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+{{app}}
+
+{#{{ dump() }}  #}
+
+
+
+{% endblock %}
