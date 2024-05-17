@@ -53,7 +53,7 @@ switch ($request) {
         break;
     case '/events/':
         error_log("I'm inside the events page");
-        echo $twig -> render('events.html');
+        echo $twig -> render('events.html.twig');
         break;
     
     case '/events2':
@@ -80,7 +80,7 @@ switch ($request) {
         break;
     default:
         http_response_code(404);
-        echo $twig -> render('404.html');
+        echo $twig -> render('404.html.twig');
         break;
 }
 ?>
