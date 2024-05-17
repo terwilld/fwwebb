@@ -48,6 +48,9 @@ switch ($request) {
         //require __DIR__ . $viewDir . 'home.php';
         break;
     
+    case '/nocontent':
+        echo $twig -> render('nocontent.html.twig');
+        break;
     case '/events/':
         error_log("I'm inside the events page");
         echo $twig -> render('events.html');
