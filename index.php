@@ -44,7 +44,7 @@ switch ($request) {
        // echo $twig ->render('child.html');
         //echo $twig ->render('home.html');
         error_log("I'm insdie the root page");
-        echo $twig -> render('fwwebbhome.html');
+        echo $twig -> render('fwwebbhome.html.twig');
         //require __DIR__ . $viewDir . 'home.php';
         break;
     
@@ -69,8 +69,11 @@ switch ($request) {
         // 'Date_1'=> 'Wednesday, May 15 2024',
         // 'Date_2' => '08:00 AM to 01:00 PM']);
         echo $twig->render('testtwig.html.twig', ['data' => $fakeData]);
+        break;
 
-
+    case '/phpinfo':
+        error_log("php info");
+        echo phpinfo();
         break;
     default:
         http_response_code(404);
