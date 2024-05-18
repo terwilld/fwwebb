@@ -1,18 +1,12 @@
 <?php
 
-
-
     $env = parse_ini_file('.env');
 
-    printf("Test0\n");
-
-    printf("TEST1\n");
     $host =  $env["DB_HOST"];
     $user =  $env["DB_USERNAME"];
     $pass = $env["DB_PASSWORD"];
     $db = $env["DB_DATABASE"];
-    printf("Fuck you\n");
-    printf($host);
+
     echo 'My username is ' .$env["DB_USERNAME"] . '!';
     printf("\n");
     $mysqli = new mysqli($host, $user, $pass, $db);
@@ -33,6 +27,5 @@
     echo('<br>');
     }
 
-
-
+    
 ?>

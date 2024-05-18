@@ -4,11 +4,12 @@
 $request = $_SERVER['REQUEST_URI'];
 $viewDir = '/views/';
 
-error_log("Inside Index.php", 0);
-error_log("This might actually be working",0);
+$dbconfig = parse_ini_file(".env");
+$host = $dbconfig["DB_HOST"];
+$user = $dbconfig["DB_USERNAME"];
+
 
 require_once './vendor/autoload.php';
-error_log("Test in the index page");
 $loader = new \Twig\Loader\FilesystemLoader(array('templates','views'));
 $twig = new \Twig\Environment($loader);
 

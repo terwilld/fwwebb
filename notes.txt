@@ -196,6 +196,12 @@ Goddamn.  Actually has a new possible note.  need to re-transform data model.
 This is probably done by hand.
 
 
+mysql
+Install
+environment var
+PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /var/www/html/mysqltest.php:18
+only on ec2
+
 
 
 ToDO:
@@ -205,6 +211,8 @@ Thow stuff in database
 Shopify
 php learn lamp
 Get the drop down filter to work?
+
+
 
 
 
