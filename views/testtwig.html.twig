@@ -82,10 +82,10 @@
                                    {% endfor %}
 
                                 {% endif %}
-                                {% if event.Topics %}
+                                {% if event.Topics_Title %}
                                 
-                                <b data-uw-rm-color-contrast="prs">{{ event.Topics.Title }}</b>
-                                    {% for Topic in event.Topics.contents  %}
+                                <b data-uw-rm-color-contrast="prs">{{ event.Topics_Title }}</b>
+                                    {% for Topic in event.Topics_contents  %}
                                         <br role="presentation" data-uw-rm-sr="">{{Topic | raw}}
                                     {% endfor %}  
                                 <br role="presentation" data-uw-rm-sr="">

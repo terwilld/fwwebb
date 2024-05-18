@@ -34,7 +34,7 @@
         )";
 
     $result = mysqli_query($mysqli,$sql);
-    echo $result;
+    //echo $result;
     $sql = "Select * from pet;";
 
     // [
