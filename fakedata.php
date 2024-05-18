@@ -18,7 +18,8 @@ $fakeData =
         //'Topics'   => ['Introduction to GE Ductless','Technology and Product Lineup','Installation and Startup','System Operation and Control','Troubleshooting','Application'],
         'Italics_msg' => 'Lunch and refreshments will be provided',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241015259928156']
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241015259928156'
     ],
     [
         'title' => 'Understanding & How to Troubleshoot Air Flow Class', 
@@ -33,7 +34,8 @@ $fakeData =
         'Topics'   => ['Title' => 'Key topics include:','contents' => ['• How to take & understand static pressures','• Proper procedure for taking static pressure','• Diagnosing issues using airflow readings','• Understanding what problems arise with improper airflow']],
         'Italics_msg' => 'Bagels and coffee will be provided',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241073360477152']
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241073360477152'
     ],
         [
         'title' => 'Lunch & Learn with Ideal Heating', 
@@ -48,7 +50,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => '',
-        'Last_msg' => ''
+        'Last_msg_content' => '',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'NAVAC Best Practices for Refrigerant Evacuation and Recovery', 
@@ -63,7 +66,8 @@ $fakeData =
         'Topics'   => ['Title' => 'Topics to be covered include:','contents' => ['','<b>Evacuation Explained</b>','Do you have a pump or a paperweight? Make sure your tools are working for you, and develop a firm grasp on the best practices for the evacuation of HVAC/R equipment','','<b>Recovery Demystified</b>','Have your cake and eat it too - achieve true and complete recovery of ALL liquid and vapor faster and more efficient than ever before.']],
         'Italics_msg' => 'Food and drinks will be provided',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241153449759162']
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241153449759162'
         ],
         [
         'title' => 'Counter Day Breakfast with White-Rodgers', 
@@ -78,7 +82,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => '',
-        'Last_msg' => ''
+        'Last_msg_content' => '',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Counter Day Breakfast with URELL', 
@@ -93,7 +98,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => '',
-        'Last_msg' => ''
+        'Last_msg_content' => '',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Counter Day Breakfast', 
@@ -108,7 +114,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => '',
-        'Last_msg' => ''
+        'Last_msg_content' => '',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Rheem Heat Pump Water Heater Training', 
@@ -123,7 +130,8 @@ $fakeData =
         'Topics'   => ['Title' => 'Topics to be covered include:','contents' => ['• Pro Terra models','• Benefits of heat pumps','• Troubleshooting','• Energy Savings','• System Monitoring']],
         'Italics_msg' => '',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Please email thar@fwwebb.com to secure your spot now for this exclusive training event.','link' => '']
+        'Last_msg_content' => 'Please email thar@fwwebb.com to secure your spot now for this exclusive training event.',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Samsung Heat Pump Training', 
@@ -138,7 +146,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => 'Breakfast refreshments and lunch will be provided.',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241264910990155']
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241264910990155'
         ],
         [
         'title' => 'VIQUA Water Filtration Training', 
@@ -153,7 +162,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => 'Lunch will be provided',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241275647712156']
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241275647712156'
         ],
         [
         'title' => 'Counter Day Breakfast with SLOAN', 
@@ -168,7 +178,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => '',
-        'Last_msg' => ''
+        'Last_msg_content' => '',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Samsung HVAC Training', 
@@ -183,7 +194,8 @@ $fakeData =
         'Topics'   => '',
         'Italics_msg' => '',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'To register please email britt@fwwebb.com.','link' => '']
+        'Last_msg_content' => 'To register please email britt@fwwebb.com.',
+        'Last_msg_link' => ''
         ],
         [
         'title' => 'Bosch IDS Heat Pump Training', 
@@ -198,9 +210,8 @@ $fakeData =
         'Topics'   => ['Title' => 'Topics covered will include:','contents' => ['• Variable capacity air source heat pump (VCHP operations)','• Load Calculations and why they matter','• Sizing and selection methods','• System design options and considerations','• Control strategies and thermostat options']],        
         'Italics_msg' => 'Lunch will be provided',
         'Bold_last_msg' => 'Space is limited...register today!',
-        'Last_msg' => ['content'=> 'Click Here to Register','link' => 'https://form.jotform.com/241283906412150']
-        ]
-
+        'Last_msg_content' => 'Click Here to Register',
+        'Last_msg_link' => 'https://form.jotform.com/241283906412150']
 ]
 
 

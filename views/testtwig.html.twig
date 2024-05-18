@@ -101,12 +101,12 @@
 
                                 {% endif %}
                                 
-                                {% if event.Last_msg %}
-                                  {% if event.Last_msg.link %}
+                                {% if event.Last_msg_content %}
+                                  {% if event.Last_msg_link %}
                                     <br role="presentation" data-uw-rm-sr="">
-                                    <a href="{{event.Last_msg.link}}" target="_blanc" data-uw-rm-color-contrast="prs" data-uw-rm-brl="PR" data-uw-original-href="{{event.Last_msg.link}}">{{event.Last_msg.content}}</a><br role="presentation" data-uw-rm-sr="">
+                                    <a href="{{event.Last_msg_link}}" target="_blanc" data-uw-rm-color-contrast="prs" data-uw-rm-brl="PR" data-uw-original-href="{{event.Last_msg_link}}">{{event.Last_msg_content}}</a><br role="presentation" data-uw-rm-sr="">
                                   {% else %}
-                                    <br role="presentation" data-uw-rm-sr="">{{event.Last_msg.content}}
+                                    <br role="presentation" data-uw-rm-sr="">{{event.Last_msg_content}}
                                     {% endif %}
                                 {% endif %}
                                     </p> <p></p>

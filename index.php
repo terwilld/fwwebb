@@ -8,7 +8,7 @@ $dbconfig = parse_ini_file(".env");
 $host = $dbconfig["DB_HOST"];
 $user = $dbconfig["DB_USERNAME"];
 
-
+require_once './mysqlupdates/autoload.php';
 require_once './vendor/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader(array('templates','views'));
 $twig = new \Twig\Environment($loader);
@@ -79,6 +79,7 @@ switch ($request) {
         error_log("php info");
         echo phpinfo();
         break;
+        
     default:
         http_response_code(404);
         echo $twig -> render('404.html.twig');

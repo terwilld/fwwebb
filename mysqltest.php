@@ -5,10 +5,15 @@
     $host =  $env["DB_HOST"];
     $user =  $env["DB_USERNAME"];
     $pass = $env["DB_PASSWORD"];
+    
+    
+    
+    
     $db = $env["DB_DATABASE"];
 
+
     echo 'My username is ' .$env["DB_USERNAME"] . '!';
-    printf("\n");
+    
     $mysqli = new mysqli($host, $user, $pass, $db);
 
     if ($mysqli->connect_errno)
@@ -17,9 +22,10 @@
             printf("Error connect: %s\n", $mysqli->connect_error);
             exit();
         }
-    echo('<br>');
-    echo 'davidtest<br>';
+
     
+    $table = 'events';
+    $sql = "CREATE TABLE IF NOT EXISTS $table (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, firstname VARCHAR(30) NOT NULL,lastname VARCHAR(30) NOT NULL)";
     $sql = "Select * from pet;";
     $result = mysqli_query($mysqli,$sql);
     while ($row = mysqli_fetch_array($result)) {
@@ -27,5 +33,5 @@
     echo('<br>');
     }
 
-    
+
 ?>

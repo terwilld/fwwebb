@@ -201,6 +201,10 @@ Install
 environment var
 PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /var/www/html/mysqltest.php:18
 only on ec2
+Needed an extra package
+
+Create table in mysql for events
+
 
 
 
