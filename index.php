@@ -66,13 +66,13 @@ switch ($request) {
         error_log("I'm inside the twig test");
         include 'fakedata.php';
         error_log($testImport);
-        
-        // echo $twig->render('testtwig.html.twig', 
-        // ['title' => 'GE Ductless Cold Climate Training', 
-        // 'trainingLogo' => 'true',
-        // 'Date_1'=> 'Wednesday, May 15 2024',
-        // 'Date_2' => '08:00 AM to 01:00 PM']);
         echo $twig->render('testtwig.html.twig', ['data' => $fakeData]);
+        break;
+    
+    case '/twigfrommysql':
+        error_log("I'm inside the twig mysql test");
+        include 'mysqlupdates/autoload.php';
+        echo $twig->render('testtwig.html.twig', ['data' => $transformedData]);
         break;
 
     case '/phpinfo':
