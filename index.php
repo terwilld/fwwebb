@@ -72,6 +72,7 @@ switch ($request) {
     case '/twigfrommysql':
         error_log("I'm inside the twig mysql test");
         include 'mysqlupdates/autoload.php';
+        dataLoad();
         echo $twig->render('testtwig.html.twig', ['data' => $transformedData]);
         break;
 
